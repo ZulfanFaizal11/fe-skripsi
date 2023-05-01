@@ -5,27 +5,34 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
-import Layout from './components/Layout'
-import Home from './pages/Home'
+import LayoutAdmin from './components/LayoutAdmin'
 import About from './pages/About'
 import NotFoundPage from './pages/404'
+import LandingPage from './pages/LandingPage';
+import HomeAdmin from './pages/HomeAdmin';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: <LandingPage />,
+    errorElement: <NotFoundPage />,
+  },
+  {
+    path: "/about",
+    element: <About />,
+  },
+  {
+    path: "/admin",
+    element: <LayoutAdmin />,
     errorElement: <NotFoundPage />,
     children: [
       {
-        path: "home",
-        element: <Home />,
+        path: "/",
+        element: <HomeAdmin />,
+        errorElement: <NotFoundPage />,
       },
-      {
-        path: "about",
-        element: <About />,
-      }
     ]
-  },
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
