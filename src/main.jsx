@@ -21,6 +21,7 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />,
+    errorElement: <NotFoundPage />,
   },
   {
     path: "/admin",
@@ -28,14 +29,12 @@ const router = createBrowserRouter([
     errorElement: <NotFoundPage />,
     children: [
       {
-        path: "/",
+        path: "",
         element: <HomeAdmin />,
-        errorElement: <NotFoundPage />,
       },
       {
-        path: "/settings",
+        path: "settings",
         element: <SettingAdmin />,
-        errorElement: <NotFoundPage />,
       },
     ]
   }
