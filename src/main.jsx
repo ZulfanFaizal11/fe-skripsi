@@ -10,6 +10,7 @@ import About from './pages/About'
 import NotFoundPage from './pages/404'
 import LandingPage from './pages/LandingPage';
 import HomeAdmin from './pages/HomeAdmin';
+import SettingAdmin from './pages/SettingAdmin';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomeAdmin />,
+        errorElement: <NotFoundPage />,
+      },
+      {
+        path: "/settings",
+        element: <SettingAdmin />,
         errorElement: <NotFoundPage />,
       },
     ]
