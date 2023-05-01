@@ -11,6 +11,8 @@ import NotFoundPage from './pages/404'
 import LandingPage from './pages/LandingPage';
 import HomeAdmin from './pages/HomeAdmin';
 import SettingAdmin from './pages/SettingAdmin';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +24,14 @@ const router = createBrowserRouter([
     path: "/about",
     element: <About />,
     errorElement: <NotFoundPage />,
+  },
+  {
+    path: "/login",
+    element: <Login />
+  },
+  {
+    path: "register",
+    element: <Register />
   },
   {
     path: "/admin",
