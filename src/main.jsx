@@ -13,6 +13,9 @@ import HomeAdmin from './pages/HomeAdmin';
 import SettingAdmin from './pages/SettingAdmin';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Booking from './pages/Booking';
+import TutorialBooking from './pages/TutorialBooking';
+import Contact from './pages/Contact';
 
 const router = createBrowserRouter([
   {
@@ -32,6 +35,18 @@ const router = createBrowserRouter([
   {
     path: "register",
     element: <Register />
+  },
+  {
+    path: "booking",
+    element: <Booking />
+  },
+  {
+    path: "tutorial-booking",
+    element: <TutorialBooking />
+  },
+  {
+    path: "contact",
+    element: <Contact />
   },
   {
     path: "/admin",
