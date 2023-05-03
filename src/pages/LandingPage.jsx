@@ -1,8 +1,7 @@
+import LayoutUser from "../user/layout/LayoutUser";
 
 const LandingPage = () => {
-    return (
-        <div>LandingPage bro</div>
-    )
-}
+  return <LayoutUser></LayoutUser>;
+};
 
-export default LandingPage
+export default LandingPage;
