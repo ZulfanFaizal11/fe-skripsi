@@ -2,7 +2,7 @@ import { Layout, Row, Col, Typography, Button } from "antd";
 import { useNavigate } from "react-router-dom";
 import { FacebookFilled, TwitterSquareFilled, InstagramFilled } from "@ant-design/icons";
 import styled from "styled-components";
-const { Header } = Layout;
+const { Header, Footer } = Layout;
 const { Title } = Typography;
 
 function LayoutUser() {
@@ -17,7 +17,6 @@ function LayoutUser() {
               cursor: "pointer",
               color: "#923421",
               fontWeight: "bold",
-              fontSize: 25,
               textDecoration: "underline",
             }}
             onClick={() => navigate("/")}
@@ -131,9 +130,15 @@ function LayoutUser() {
         </Col>
       </Row>
       <hr />
-      <Row justify="center" style={{ padding: "50px 0 50px 0", backgroundColor: "#ffffff", color: "#005F6C" }}>
-        <Col xs={24}></Col>
-      </Row>
+
+      <Footer
+        style={{
+          textAlign: "center",
+          color: "#005F6C",
+        }}
+      >
+        ©2021 Village Futsal. All Rights Reserved
+      </Footer>
     </>
   );
 }
