@@ -18,13 +18,14 @@ function LayoutUser() {
               color: "#923421",
               fontWeight: "bold",
               textDecoration: "underline",
+              fontSize: 20,
             }}
             onClick={() => navigate("/")}
           >
             GEDUNG MAHKOTA WULUNG
           </Col>
           <Col>
-            <Row justify="space-between" gutter={16}>
+            <Row justify="space-between" gutter={24}>
               <Col
                 style={{
                   cursor: "pointer",
@@ -129,12 +130,13 @@ function LayoutUser() {
           </Row>
         </Col>
       </Row>
-      <hr />
+      <hr style={{ margin: "0" }} />
 
       <Footer
         style={{
           textAlign: "center",
           color: "#005F6C",
+          backgroundColor: "#FFFFFF",
         }}
       >
         ©2021 Village Futsal. All Rights Reserved
