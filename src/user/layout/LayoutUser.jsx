@@ -5,7 +5,7 @@ import styled from "styled-components";
 const { Header, Footer } = Layout;
 const { Title } = Typography;
 
-function LayoutUser() {
+const LayoutUser = (props) => {
   const navigate = useNavigate();
 
   return (
@@ -82,6 +82,8 @@ function LayoutUser() {
       </Header>
       <hr style={{ margin: "0" }} />
 
+      {props.children}
+
       <Row justify="center" style={{ padding: "50px 0 50px 0", backgroundColor: "#F7F9FA", color: "#005F6C" }}>
         <Col xs={24}>
           <Row justify="center">
@@ -152,12 +154,13 @@ function LayoutUser() {
           color: "#005F6C",
           backgroundColor: "#FFFFFF",
         }}
+        xs={24}
       >
         ©2021 Village Futsal. All Rights Reserved
       </Footer>
     </>
   );
-}
+};
 
 export default LayoutUser;
 
