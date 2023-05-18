@@ -84,7 +84,7 @@ const LayoutUser = (props) => {
 
       {props.children}
 
-      <Row justify="center" style={{ padding: "50px 0 50px 0", backgroundColor: "#F7F9FA", color: "#005F6C" }}>
+      <Row justify="space-between" style={{ padding: "50px 0 50px 0", backgroundColor: "#F7F9FA", color: "#005F6C" }}>
         <Col xs={24}>
           <Row justify="center">
             <Col xs={20} lg={18}>
