@@ -1,4 +1,5 @@
-import { Card, Col, DatePicker, Grid, Image, Row, Typography } from "antd";
+import { Card, Col, DatePicker, Grid, Image, Row, Typography, Select, Button } from "antd";
+import { SearchOutlined } from "@ant-design/icons";
 import IconHome from "../../../assets/user/home/Iconhero.png";
 const { Title } = Typography;
 
@@ -7,6 +8,14 @@ const Home = () => {
   const onChange = (date, dateString) => {
     console.log(date, dateString);
   };
+
+  const handleOnChange = (value) => {
+    console.log(`selected ${value}`);
+  };
+  const handleOnSearch = (value) => {
+    console.log("search:", value);
+  };
+
   return (
     <>
       <Row justify="center" style={{ paddingTop: "30px" }}>
@@ -34,17 +43,42 @@ const Home = () => {
                 Kamu ga perlu repot lagi datang buat booking. <br />
                 Booking lapangan udah bisa dari website ini aja.
               </p>
-              <Card style={{ width: "300", textAlign: "start" }}>
+              <Card style={{ width: "200", textAlign: "start" }}>
                 <Row style={{ justifyContent: "start" }}>
-                  <Col style={{ marginRight: "5rem" }}>
+                  <Col style={{ marginRight: "3rem" }}>
                     <p>Tanggal</p>
                     <DatePicker style={{ padding: "4px 8px" }} onChange={onChange} />
                   </Col>
-                  <Col style={{ marginRight: "5rem" }}>
+                  <Col style={{ marginRight: "3rem" }}>
                     <p>Lapangan</p>
+                    <Select
+                      showSearch
+                      placeholder="Pilih Lapangan"
+                      optionFilterProp="children"
+                      onChange={handleOnChange}
+                      onSearch={handleOnSearch}
+                      filterOption={(input, option) => (option?.label ?? "").toLowerCase().includes(input.toLowerCase())}
+                      options={[
+                        {
+                          value: "1",
+                          label: "Lapangan No.1",
+                        },
+                        {
+                          value: "2",
+                          label: "Lapangan No.2",
+                        },
+                        {
+                          value: "3",
+                          label: "Lapangan No.3",
+                        },
+                      ]}
+                    />
                   </Col>
                   <Col>
                     <p>Cari</p>
+                    <Button style={{ backgroundColor: "#FF5B24", color: "#ffffff" }} icon={<SearchOutlined />}>
+                      Cari
+                    </Button>
                   </Col>
                 </Row>
               </Card>
