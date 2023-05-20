@@ -1,6 +1,7 @@
 import { Col, Grid, Image, Row, Typography } from "antd";
 import IconAbout from "../../../assets/user/about/about-image.png";
-
+import IconStar from "../../../assets/user/about/star.png";
+import IconEmptyStar from "../../../assets/user/about/starempty.svg";
 const { Title } = Typography;
 
 const About = () => {
@@ -44,7 +45,11 @@ const About = () => {
                 </Col>
                 <Col>
                   <Title style={{ color: "#FF5B24", fontWeight: "bold", textAlign: "start" }}>4.6</Title>
-                  <Image alt="star" />
+                  <Image alt="star" src={IconStar} style={{ paddingRight: "0.6rem", paddingBottom: "0.8rem" }} />
+                  <Image alt="star" src={IconStar} style={{ paddingRight: "0.6rem", paddingBottom: "0.8rem" }} />
+                  <Image alt="star" src={IconStar} style={{ paddingRight: "0.6rem", paddingBottom: "0.8rem" }} />
+                  <Image alt="star" src={IconStar} style={{ paddingRight: "0.6rem", paddingBottom: "0.8rem" }} />
+                  <Image alt="star" src={IconEmptyStar} style={{ paddingBottom: "0.8rem" }} />
                 </Col>
               </Row>
             </Col>
