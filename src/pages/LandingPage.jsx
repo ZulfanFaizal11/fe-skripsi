@@ -1,7 +1,7 @@
 
 const LandingPage = () => {
     return (
-        <div>This LandingPage bro</div>
+        <div className="bg-red-200">This LandingPage bro</div>
     )
 }
 

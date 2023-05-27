@@ -4,7 +4,6 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import 'antd/dist/reset.css';
 import './index.css'
 import LayoutAdmin from './components/LayoutAdmin'
 import About from './pages/About'
