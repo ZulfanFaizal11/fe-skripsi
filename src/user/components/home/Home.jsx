@@ -45,11 +45,11 @@ const Home = () => {
               </p>
               <Card style={{ width: "200", textAlign: "start" }}>
                 <Row style={{ justifyContent: "start" }}>
-                  <Col style={{ marginRight: "3rem" }}>
+                  <Col style={{ marginRight: "2rem" }}>
                     <p>Tanggal</p>
                     <DatePicker style={{ padding: "4px 8px" }} onChange={onChange} />
                   </Col>
-                  <Col style={{ marginRight: "3rem" }}>
+                  <Col style={{ marginRight: "2rem" }}>
                     <p>Lapangan</p>
                     <Select
                       showSearch

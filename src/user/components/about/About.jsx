@@ -14,7 +14,7 @@ const About = () => {
           <Row>
             <Col md={24} lg={12} style={{ textAlign: "center", padding: "1vh 5vh 2vh 0vh" }}>
               <Row span={24} style={{ marginTop: "2.5rem", overflow: "hidden", justifyContent: "start" }}>
-                <Image alt="about" src={IconAbout} preview={false} style={{ padding: "0" }} />
+                <Image alt="about" src={IconAbout} preview={false} width={400} style={{ padding: "0" }} />
               </Row>
             </Col>
             <Col md={24} lg={12} style={{ textAlign: "center", padding: "2vh 5vh 2vh 5vh" }}>
