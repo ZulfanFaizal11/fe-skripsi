@@ -5,8 +5,15 @@ import SelectOption from '../components/atom/SelectOption'
 import { AiOutlineSearch, AiFillStar } from 'react-icons/ai'
 import Button from '../components/atom/Button'
 import AboutImage from '../assets/img/about-image.png'
+import { useRef } from 'react'
 
 const LandingPage = () => {
+    const ARR_TESTI = [1, 2, 3, 4, 5]
+    const ref = useRef(null)
+    const scroll = (scrollOffset) => {
+        ref.current.scrollLeft += scrollOffset;
+    };
+
     return (
         <LayoutUser>
             <div className="grid sm:grid-cols-2 grid-cols-1 md:px-24 px-8 pt-24 gap-24">
@@ -74,19 +81,49 @@ const LandingPage = () => {
                     </div>
                 </div>
             </div>
-            <div className="grid grid-cols-1 pb-24 px-24">
+            <div className="grid grid-cols-1 sm:pb-24 pb-8 sm:px-24 px-8">
                 <div>
                     <div className='text-center text-[#005F6C] sm:text-[48px] text-[36px] font-semibold'>
                         Pendapat Mereka
                     </div>
                     <div className="flex justify-center">
                         <div className='text-center lg:w-1/3 w-full mt-8 text-[#303030] sm:text-xl text-md leading-loose'>
-                            Village FUtsal telah diulas oleh lebih dari 360 orang di Google Maps dan mendapat rating rata-rata 4,6. Simak ulasan mereka.
+                            Village Futsal telah diulas oleh lebih dari 360 orang di Google Maps dan mendapat rating rata-rata 4,6. Simak ulasan mereka.
                         </div>
                     </div>
                 </div>
-                <div>
-
+                <div ref={ref} style={{ scrollBehavior: 'smooth' }} className="max-w-full flex flex-row gap-24 sm:p-24 sm:px-32 p-8 border-2 overflow-x-auto">
+                    {
+                        ARR_TESTI.map(x => (
+                            <div className="m-0 p-2" key={x} id={`testi-${x}`}>
+                                <div className="sm:h-[356px] sm:w-[480px] h-[256px] w-[380px] border-2 rounded-lg p-12">
+                                    <div className="grid grid-cols-1">
+                                        <div className='text-[12px] sm:text-[18px]'>
+                                            <div>
+                                                Tempat futsalnya nyaman dan bersih. Lapangannya ada 6 dan pakai rumput sintetis. Parkirannya luas. Ada cafe yang harganya terjangkau.  Cocok untuk ajak keluarga. Pokoknya recommended banget.
+                                            </div>
+                                            <div className='flex space-x-4 sm:mt-8 mt-4 items-start'>
+                                                <img src="" alt="Profile" width={100} />
+                                                <div>
+                                                    <div>Kevin Prasetia</div>
+                                                    <div className="sm:mt-4 mt-2 text-[#005F6C] text-[12px] sm:text-[24px] flex space-x-4">
+                                                        <AiFillStar />
+                                                        <AiFillStar />
+                                                        <AiFillStar />
+                                                        <AiFillStar />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
+                <div className="flex justify-between">
+                    <button onClick={() => scroll(-300)}>left scroll</button>
+                    <button onClick={() => scroll(300)}>right scroll</button>
                 </div>
             </div>
         </LayoutUser>
