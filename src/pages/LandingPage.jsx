@@ -6,6 +6,7 @@ import { AiOutlineSearch, AiFillStar } from 'react-icons/ai'
 import Button from '../components/atom/Button'
 import AboutImage from '../assets/img/about-image.png'
 import { useRef } from 'react'
+import AvatarProfile from '../assets/img/avatar.png'
 
 const LandingPage = () => {
     const ARR_TESTI = [1, 2, 3, 4, 5]
@@ -103,7 +104,7 @@ const LandingPage = () => {
                                                 Tempat futsalnya nyaman dan bersih. Lapangannya ada 6 dan pakai rumput sintetis. Parkirannya luas. Ada cafe yang harganya terjangkau.  Cocok untuk ajak keluarga. Pokoknya recommended banget.
                                             </div>
                                             <div className='flex space-x-4 sm:mt-8 mt-4 items-start'>
-                                                <img src="" alt="Profile" width={100} />
+                                                <img src={AvatarProfile} alt="Profile" width={75} className='rounded-full' />
                                                 <div>
                                                     <div>Kevin Prasetia</div>
                                                     <div className="sm:mt-4 mt-2 text-[#005F6C] text-[12px] sm:text-[24px] flex space-x-4">
