@@ -1,6 +1,12 @@
+import LayoutUser from "../components/Layouts/LayoutUser"
+
 const Login = () => {
     return (
-        <div>Login</div>
+        <LayoutUser>
+            <div className="p-24 bg-red-500">
+                this is landing page
+            </div>
+        </LayoutUser>
     )
 }
 
