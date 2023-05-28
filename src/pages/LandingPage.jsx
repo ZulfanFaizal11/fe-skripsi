@@ -92,7 +92,7 @@ const LandingPage = () => {
                         </div>
                     </div>
                 </div>
-                <div ref={ref} style={{ scrollBehavior: 'smooth' }} className="max-w-full flex flex-row gap-24 sm:p-24 sm:px-32 p-8 border-2 overflow-x-auto">
+                <div ref={ref} style={{ scrollBehavior: 'smooth' }} id="testi" className="max-w-full flex flex-row gap-24 sm:p-24 sm:px-32 p-8 overflow-x-scroll">
                     {
                         ARR_TESTI.map(x => (
                             <div className="m-0 p-2" key={x} id={`testi-${x}`}>
@@ -122,8 +122,8 @@ const LandingPage = () => {
                     }
                 </div>
                 <div className="flex justify-between">
-                    <button onClick={() => scroll(-300)}>left scroll</button>
-                    <button onClick={() => scroll(300)}>right scroll</button>
+                    <button onClick={() => scroll(-700)}>left scroll</button>
+                    <button onClick={() => scroll(700)}>right scroll</button>
                 </div>
             </div>
         </LayoutUser>
