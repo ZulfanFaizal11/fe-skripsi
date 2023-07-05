@@ -16,6 +16,7 @@ import Register from './pages/Register';
 import Booking from './pages/Booking';
 import TutorialBooking from './pages/TutorialBooking';
 import Contact from './pages/Contact';
+import RegisterPhoto from './pages/RegisterPhoto';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "register",
     element: <Register />
+  },
+  {
+    path: "/registerphoto",
+    element: <RegisterPhoto />
   },
   {
     path: "booking",
