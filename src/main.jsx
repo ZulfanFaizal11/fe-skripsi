@@ -38,7 +38,7 @@ const router = createBrowserRouter([
     element: <Register />
   },
   {
-    path: "/registerphoto",
+    path: "registerphoto",
     element: <RegisterPhoto />
   },
   {
