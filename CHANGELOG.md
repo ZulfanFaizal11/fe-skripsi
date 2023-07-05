@@ -11,6 +11,7 @@ hotfix:
 
 - hotfix:
   - route: fix rewrite routes
+  - auth-page: done add new pages for auth-page
 
 # v0.1.2 - 30 Juni 2023
 
